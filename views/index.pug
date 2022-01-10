@@ -1,0 +1,36 @@
+extends layout
+
+block content  
+  script(src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app-compat.js")
+  script(src="https://www.gstatic.com/firebasejs/9.4.1/firebase-auth-compat.js")
+  script(src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app-check-compat.js")
+  script(src="/javascripts/main.js")
+  h1= title
+  div(class="container")
+    div(class="row")
+      div(class="col")
+        div(class="card")
+          div(class="card-body")
+            h5(class="card-title") item
+            p(class="card-text") Description
+            a(href="#", class="btn btn-primary", id="item-1") Buy
+      div(class="col")
+        div(class="card")
+          div(class="card-body")
+            h5(class="card-title") item
+            p(class="card-text") Description
+            a(href="#", class="btn btn-primary", id="item-2") Buy
+      div(class="col")
+        div(class="card")
+          div(class="card-body")
+            h5(class="card-title") item
+            p(class="card-text") Description
+            a(href="#", class="btn btn-primary", id="item-3") Buy
+      div 
+        input(id="phonenumber")
+        button(id="verify") Verify
+      div 
+        input(id="otp")
+        button(id="confirm") Confirm
+      div(id="recaptcha-container")
+      div(id="finance-chart")
