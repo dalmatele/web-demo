@@ -1,7 +1,8 @@
 // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
 // import { getAuth, RecaptchaVerifier } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 $(document).ready(function(){
-    var request = new RestApi();    
+    var request = new RestApi();
+    var chart = new ChartDemo();    
     $(".btn").click(function(){
         var id = $(this).attr("id");
         console.log(id);
@@ -26,13 +27,13 @@ $(document).ready(function(){
             });
     }) 
     const firebaseConfig = {
-        apiKey: "AIzaSyBLZYZfSRhlsAnwKftZGEKyKsy55kCniDA",
-        authDomain: "topicanative-ccc8e.firebaseapp.com",
-        projectId: "topicanative-ccc8e",
-        storageBucket: "topicanative-ccc8e.appspot.com",
+        apiKey: "api-key",
+        authDomain: "example.com",
+        projectId: "some_id",
+        storageBucket: "some_bucket",
         messagingSenderId: "556900542977",
-        appId: "1:556900542977:web:1736dc5f88abeafa57ae00",
-        measurementId: "G-C2H61SDB55"
+        appId: "app-id",
+        measurementId: "measure-id"
       };
     const app = firebase.initializeApp(firebaseConfig);  
     // firebase.auth().useDeviceLanguage();  
@@ -53,5 +54,6 @@ $(document).ready(function(){
             }).catch((error) => {
                 console.log(error);
             })
-    })
+    });
+    
 });

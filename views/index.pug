@@ -1,10 +1,18 @@
 extends layout
 
-block content  
+block content
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+  link(rel="stylesheet", href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css")      
+  script(src="https://code.jquery.com/ui/1.13.0/jquery-ui.js") 
   script(src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app-compat.js")
   script(src="https://www.gstatic.com/firebasejs/9.4.1/firebase-auth-compat.js")
-  script(src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app-check-compat.js")
+  script(src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app-check-compat.js")  
+  script(src="https://cdn.jsdelivr.net/npm/d3@7")
+  script(src="https://code.highcharts.com/highcharts.js") 
+  script(src="https://code.highcharts.com/themes/dark-unica.js") 
   script(src="/javascripts/main.js")
+  script(src="/javascripts/chart-demo.js")
   h1= title
   div(class="container")
     div(class="row")
@@ -32,5 +40,12 @@ block content
       div 
         input(id="otp")
         button(id="confirm") Confirm
+      div 
+        button(id="high-chart-button") Update chart
       div(id="recaptcha-container")
-      div(id="finance-chart")
+      div(id="finance-chart", width="600", height="500")
+      div(id="finance-chart-2")
+      div(id="slider-container")         
+        div(id="finance-slider") 
+        input(type="text", id="amount", readonly, value="0")
+      div(id="highchart", width="300" height="400")

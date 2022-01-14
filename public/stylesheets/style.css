@@ -6,3 +6,28 @@ body {
 a {
   color: #00B7FF;
 }
+.bar { fill: steelblue; }
+.bar:hover{
+  fill: red;
+}
+#highchart{
+  margin-top: 20px;
+}
+#slider-container{
+  overflow: hidden;
+  margin-top: 20px;
+}
+#amount{
+  border: none !important;
+  margin-left: 10px;
+}
+#finance-slider{
+  max-width: 500px;
+  float: left;
+  width: 500px;
+  margin-top: 5px;
+}
+.ui-slider-handle{
+  transition-property: left;
+  transition-duration: 0.1s;
+}

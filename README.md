@@ -3,6 +3,7 @@
 Run bellow commands, step by step:
 
 `npm install`
+
 `DEBUG=web-demo:* npm start`
 
 
